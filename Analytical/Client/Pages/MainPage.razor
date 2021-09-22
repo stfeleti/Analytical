@@ -1,0 +1,103 @@
+﻿@page "/main"
+<div class="container-sm"
+
+    <nav class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap pr-2">
+      <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="#">Home</a>
+      <input class="form-control form-control-light w-75" type="text" placeholder="Filter" aria-label="Search">
+      <ul class="navbar-nav px-3">
+        <li class="nav-item text-nowrap">
+          <a class="nav-link" href="#">Sign out</a>
+        </li>
+      </ul>
+    </nav>
+
+    <div class="container-fluid">
+      <div class="row">
+          <main role="main" class="col-md-12 ml-sm-auto col-lg-12 pt-3 px-4">
+              <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pb-2 mb-3 border-bottom">
+                  <h1 class="h2">Open Jobs</h1>
+<!-- Trigger the modal with a button -->
+                  <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Add New Job</button>
+              </div>
+              <div class="table-responsive">
+                  <table class="table table-striped table-sm">
+                      <thead>
+                          <tr>
+                              <th>#</th>
+                              <th>Job Name (Position)</th>
+                              <th>Department</th>
+                              <th>Ideal Candidate Skill</th>
+                              <th>Ideal Candidate Score</th>
+                              <th>Ideal Candidate Interview</th>
+                          </tr>
+                      </thead>
+                      <tbody>
+                          <tr>
+                              <td>1,001</td>
+                              <td>Lorem</td>
+                              <td>ipsum</td>
+                              <td>dolor</td>
+                              <td>sit</td>
+                              <td>sit</td>
+                          </tr>
+                      </tbody>
+                  </table>
+              </div>
+
+
+                <!--Add new Employees-->
+              <div class="container">
+                    <!-- This will create a model to input a new job -->
+                  <div class="modal fade" id="myModal" role="dialog">
+                      <div class="modal-dialog">
+
+                            <!-- Modal content-->
+                          <div class="modal-content">
+                              <button type="button" class="close" data-dismiss="modal">&times;</button>
+                              <div class="modal-header">
+
+                                  <h4 class="modal-title">Add New Employee</h4>
+                              </div>
+                              <div class="modal-body">
+                                  <form>
+                                      <div class="row mb-4">
+                                          <div class="col">
+                                              <div class="form-outline">
+                                                  <input type="text" id="position" class="form-control" />
+                                                  <label class="form-label" for="position">Position</label>
+                                              </div>
+                                          </div>
+                                          <div class="col">
+                                              <div class="form-outline">
+                                                  <input type="text" id="department" class="form-control" />
+                                                  <label class="form-label" for="department">Department</label>
+                                              </div>
+                                          </div>
+                                      </div>
+                                      <fieldset>
+                                          <legend>Ideal Candidate for the position</legend>
+                                          <input type="text" id="skill" class="form-control" />
+                                          <label class="form-label" for="skill">skill</label>
+                                          <input type="text" id="score" class="form-control" />
+                                          <label class="form-label" for="form3Example2">score</label>
+                                          <input type="text" id="interview" class="form-control" />
+                                          <label class="form-label" for="form3Example2">interview</label>
+                                      </fieldset>
+                                  </form>
+                              </div>
+                              <div class="modal-footer">
+                                  <button type="button" class="btn btn-primary">Save changes</button>
+                                  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </main>
+      </div>
+    </div>
+</div>
+
+@code {
+    //List<OpenJob> OpenJobs { get; set;}
+}
